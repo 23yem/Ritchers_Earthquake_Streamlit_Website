@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <style>
+        body {
+            font-size: 0.7rem; /* Base font size */
+            background-color: #fad2d2;
+            zoom: 1.5; /* Scale up by 50% */
+            color: #eb5d5dd8;
+        }
+
+        p, h2, figcaption, h3 {
+        color: #d80808;
+        }
+
+        .container {
+            max-width: 1000px; /* Max-width for the container */
+            margin: auto; /* Center the container */
+        }
+        figure img {
+            width: 100%; /* Full width of its container */
+            max-width: 450px; /* Max width of the image */
+            height: auto; /* Maintain aspect ratio */
+            display: block; /* Block display to respect max-width */
+            margin: 0 auto; /* Center the image */
+        }
+        h2 {
+            font-size: 1.2rem; /* Heading size */
+        }
+        h3 {
+            font-size: 1rem; /* Subheading size */
+        }
+        p {
+            font-size: 0.7rem; /* Paragraph text size */
+        }
+        /* Ensure the main content is visible */
+        main {
+            padding: 1rem 0; /* Add padding around main content */
+        }
+        nav ul {
+            padding: 0.5rem 0; /* Padding for nav */
+            list-style-type: none; /* Remove list bullets */
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+            display: flex; /* Add this line */
+            flex-wrap: nowrap; /* Add this line to prevent wrapping */
+        }
+        nav ul li {
+            display: inline; /* Display nav items in a line */
+            margin-right: 10px; /* Right margin for spacing */
+        }
+        nav ul li a {
+           
+            text-decoration: none; /* Remove text underline */
+            font-size: 0.6rem; /* Smaller font size for nav links */
+            padding: 5px 10px; /* Add padding to give a button-like appearance */
+            border-radius: 50px; /* Rounded corners */
+            transition: background-color 0.3s, color 0.3s; /* Transition for smooth color change */
+            background-color: #d80808; /* Set background color */
+            color: #fff; /* Set text color */
+        }
+
+        /* Change color on hover */
+        nav ul li a:hover {
+            background-color: #0056b3; /* Change background color on hover */
+            color: #fff; /* Keep text color the same on hover */
+            text-decoration: underline; /* Add underline on hover */
+        }
+
+
+
+
+        li strong {
+        display: inline-block; /* Allow the boundary to wrap */
+        white-space: nowrap; /* Keep the text on a single line */
+        overflow: hidden; /* Hide overflow */
+        text-overflow: ellipsis; /* Show an ellipsis when the text overflows */
+        max-width: 100%; /* Limit the width to the parent's width */
+        }
+
+        nav ul {
+        display: flex; /* Use flexbox for layout */
+        flex-wrap: nowrap; /* Prevent wrapping to the next line */
+        justify-content: space-around; /* Distribute space evenly between items */
+    }
+
+    nav ul li a {
+        font-size: calc(0.4rem + 0.2vw); /* Dynamically adjust font size based on viewport width */
+    }
+
+    
+
+        /* Responsive styles for mobile!*/
+        @media (max-width: 1000px) {
+        body {
+            background-color: #fad2d2 !important;
+            zoom: 1; /* Reset zoom for small screens */
+            min-height: 1900px;
+        }
+        .container {
+            max-width: 100%; /* Allow the container to use the full width of the screen */
+            padding: 0 1rem; /* Add some horizontal padding */
+        }
+        figure img {
+            max-width: 100%; /* Allow the image to use the full width of its container */
+        }
+
+        nav ul li {
+            margin-bottom: 10px; /* Bottom margin for spacing */
+            margin-right: 0; /* Remove right margin */
+        }
+
+
+        li strong {
+            white-space: normal; /* Allow the text to wrap to the next line */
+        }
+
+
+        nav ul li a {
+            font-size: calc(0.4rem + 0.2vw); /* Reduce font size for small screens */
+        }
+
+        
+    }
+
+
+    /* THIS IS VERY IMPORTANT. My Google Chrome is in Dark Mode so it makes the background color black. This overrides that and fills any blank spaces with my desired color, instead of black*/
+    @media (prefers-color-scheme: dark) { 
+        :root {
+            --background-color: #fad2d2 !important; /* Or any other light color you prefer */
+            /* Define other variables or CSS rules as needed */
+        }
+    }
+
+    @media (prefers-color-scheme: light) { 
+        :root {
+            --background-color: #fad2d2 !important; /* Or any other light color you prefer */
+            /* Define other variables or CSS rules as needed */
+        }
+    }
+    </style>
+    <title>Home - Histopathologic Cancer Detection</title>
+</head>
+<body>
+    <nav class="container-fluid">
+        <ul>
+            <li style="color: #fff;"><strong style="background-color:#d80808; border: 2px solid #d80808; padding: 5px; border-radius: 10px; ">Histopathologic Cancer Detection</strong></li>        </ul>
+        <ul> 
+            <li><a href="https://michael-ye-histopathologic-cancer-detection-home.streamlit.app/" target="_blank">Home</a></li>
+            <li><a href="https://michael-ye-histopathologic-cancer-detection-cnn.streamlit.app/" target="_blank">Convolutional Neural Network (CNN)</a></li>
+            <li><a href="https://github.com/23yem/Kaggle-Histopathologic-Cancer-Detection" target="_blank">GitHub Repository</a></li>
+        </ul>
+    </nav>
+    <main class="container">
+        <div class="grid">
+            <section>
+                <hgroup >
+                    <h2 >Histopathologic Cancer Detector (Machine Learning) </h2>
+                    <h3>My Second Machine Learning Project</h3>
+                </hgroup>
+                <p>Hi, I'm Michael and this is my second Machine Learning Project. This project is based on a Kaggle competition with the goal of developing an image classification algorithm using Convolutional Neural Networks (CNNs) to identify metastatic tissue in histopathologic scans of lymph node sections.</p>
+                <p>The primary challenge in this competition is to create a model that can accurately classify microscopic images of lymph node sections as containing metastatic tissue or not. This repository includes the code for building and training a CNN to tackle this problem. The model is developed in Python using TensorFlow and Keras.</p>
+                <p>I learned how to do Image Classification with Convolutional Neural Networks, Data Augmentation, hyper parameter tuning for Convolutional Neural Networks, and how to handle 270,000+ images</p>
+                <figure>
+                    <img src="https://img.freepik.com/premium-photo/cartoon-hospital-room-with-person-white-suit-red-mask_900775-1147.jpg" alt="Hospital image" />
+                    <img src="https://teddykoker.com/images/2019-08-12-histopathologic-cancer-detection-with-transfer-learning_4_0.png" alt="cancer" />
+
+                    <figcaption style="color: #d80808;">Feel free to navigate to the other web pages above to look at the different parts of the project. And also feel free to go to the github page for a more in-depth view of my project.</figcaption>
+                
+                </figure>
+            </section>
+        </div>
+    
+        <!-- New section for Kaggle competition -->
+        <section>
+            <hgroup>
+                <h2>Kaggle Competition</h2>
+            </hgroup>
+            <p>This project was part of a Kaggle competition. You can learn more about the competition and see other submissions on the Kaggle website.</p>
+            <p><a href="https://www.kaggle.com/competitions/histopathologic-cancer-detection" target="_blank">Go to Kaggle Competition</a></p>
+        </section>
+
+    
+
+
+    </main>
+    
+</body>
+</html>
