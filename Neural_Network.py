@@ -182,7 +182,7 @@ with col2:
     
 
         # Print table that tells the percentage for each class
-        st.markdown("This table shows the percentage certainty for each result. The '0' column <span style='color: green; font-weight: bold;'> is low damage </span>, the '1' column is <span style='color: gray; font-weight: bold;'>medium damage</span>, and the '2' column is <span style='color: red; font-weight: bold;'>high damage</span>.", unsafe_allow_html=True)        
+        st.markdown("This table shows the percentage certainty for each column. The '0' column <span style='color: green; font-weight: bold;'> is low damage </span>, the '1' column is <span style='color: gray; font-weight: bold;'>medium damage</span>, and the '2' column is <span style='color: red; font-weight: bold;'>high damage</span>.", unsafe_allow_html=True)        
         predictions_percent = np.around(predictions*100, 2)
 
         predictions_percent = pd.DataFrame(predictions_percent)
