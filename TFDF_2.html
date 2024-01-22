@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <style>
+        body {
+            font-size: 0.7rem; /* Base font size */
+            background-color: #8B4513;
+            zoom: 1.5; /* Scale up by 50% */
+        }
+
+        p, h2, figcaption, h3 {
+        color: #ffffff;
+        }
+
+        .container {
+            max-width: 900px; /* Max-width for the container */
+            min-height: 5500px;
+            margin: auto; /* Center the container */
+            
+        }
+        figure img {
+            width: 100%; /* Full width of its container */
+            max-width: 450px; /* Max width of the image */
+            height: auto; /* Maintain aspect ratio */
+            display: block; /* Block display to respect max-width */
+            margin: 0 auto; /* Center the image */
+        }
+        h2 {
+            font-size: 1.2rem; /* Heading size */
+        }
+        h3 {
+            font-size: 1rem; /* Subheading size */
+        }
+        p {
+            font-size: 0.7rem; /* Paragraph text size */
+        }
+        /* Ensure the main content is visible */
+        main {
+            padding: 1rem 0; /* Add padding around main content */
+        }
+        nav ul {
+            padding: 0.5rem 0; /* Padding for nav */
+            list-style-type: none; /* Remove list bullets */
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+            display: flex; /* Add this line */
+            flex-wrap: nowrap; /* Add this line to prevent wrapping */
+        }
+        nav ul li {
+            display: inline; /* Display nav items in a line */
+            margin-right: 10px; /* Right margin for spacing */
+        }
+        nav ul li a {
+        
+            text-decoration: none; /* Remove text underline */
+            font-size: 0.6rem; /* Smaller font size for nav links */
+            padding: 5px 10px; /* Add padding to give a button-like appearance */
+            border-radius: 50px; /* Rounded corners */
+            transition: background-color 0.3s, color 0.3s; /* Transition for smooth color change */
+            background-color: #81B29A; /* Set background color */
+            color: #fff; /* Set text color */
+        }
+
+        /* Change color on hover */
+        nav ul li a:hover {
+            background-color: #b8dac9; /* Change background color on hover */
+            color: #fff; /* Keep text color the same on hover */
+            text-decoration: underline; /* Add underline on hover */
+        }
+
+
+        /* Responsive styles for mobile!*/
+        @media (max-width: 1000px) {
+
+            h1 {
+            font-size: 1.5rem;
+           
+            }
+
+            .container {
+            
+            margin: auto; /* Center the container */
+            overflow-y: auto; /* Add a scrollbar if necessary */
+          
+            }
+        }
+        /* THIS IS VERY IMPORTANT. My Google Chrome is in Dark Mode so it makes the background color black. This overrides that and fills any blank spaces with my desired color, instead of black*/
+        @media (prefers-color-scheme: dark) { 
+            :root {
+                --background-color: #8B4513 !important; /* Or any other light color you prefer */
+                /* Define other variables or CSS rules as needed */
+            }
+        }
+
+        @media (prefers-color-scheme: light) { 
+            :root {
+                --background-color: #8B4513 !important; /* Or any other light color you prefer */
+                /* Define other variables or CSS rules as needed */
+            }
+        }
+    </style>
+    <title>Nepal Project</title>
+</head>
+<body>
+    
+    <main class="container">
+        
+        <body>
+            <h1 style="color: #7af5b9; text-align: center;">A Comprehensive Analysis of My TensorFlow Decision Forests Model</h1>
+
+            
+            
+            <h2>Step 1: Introduction to Richter's Predictor Project</h2>
+            <p>The notebook begins with an introduction to the Richter's Predictor project, aiming to model earthquake damage in Nepal using TensorFlow Decision Forests (TFDF). This approach marks my second engagement with TFDF, enriching my understanding of this powerful machine learning tool. The project's goal is to effectively predict earthquake-induced damages, leveraging the robustness of TFDF in handling complex datasets.</p>
+            
+            <h2>Step 2: Data Loading and Preprocessing</h2>
+            <p>Initial steps involve loading and preprocessing the data. Libraries such as NumPy and Pandas are used for data manipulation, ensuring the dataset is clean and ready for analysis. This phase is crucial as it lays the foundation for accurate model predictions. Understanding data structures and cleaning techniques was key to preparing a robust dataset for the TFDF model.</p>
+            
+            <h2>Step 3: Exploratory Data Analysis (EDA)</h2>
+            <p>Exploratory Data Analysis (EDA) is conducted to gain insights into the dataset. Visualization tools are employed to understand the distribution of data, identify patterns, and detect anomalies. This step is vital for making informed decisions in the later stages of model building. The graphical representation of data helped me comprehend the underlying structure and relationships within the dataset.</p>
+            
+            <h2>Step 4: Feature Engineering</h2>
+            <p>Feature engineering is performed to enhance the model's predictive power. This involves creating new features from existing data and selecting the most relevant features for the model. This process is crucial in improving model performance and accuracy. My experience with feature engineering allowed me to tailor the dataset effectively for the TFDF model.</p>
+            
+            <h2>Step 5: Model Training with TFDF</h2>
+            <p>The core of the notebook involves training the TFDF model. TensorFlow Decision Forests are utilized for their efficiency in handling tabular data. The model training phase is critical, as it determines the model's ability to generalize from the training data to unseen data. My familiarity with TFDF deepened through this hands-on experience.</p>
+            
+            <h2>Step 6: Hyperparameter Tuning</h2>
+            <p>Hyperparameter tuning is employed to optimize the model's performance. I utilized the auto-generated parameter space for hyperparameter tuning, which proved invaluable for understanding the effects of different parameters on the model's performance, especially in preventing overfitting and underfitting. This approach to tuning was a significant learning curve, enhancing my skills in model optimization.</p>
+            
+            <h2>Step 7: Model Evaluation</h2>
+            <p>Post-training, the model is evaluated using various metrics to assess its performance. This step is essential to determine the effectiveness of the model in predicting earthquake damages. The evaluation process helped me understand the strengths and weaknesses of the TFDF model, guiding improvements in future iterations.</p>
+            
+            <h2>Step 8: Visualization of Model Performance</h2>
+            <p>Visualizing the model's performance plays a key role in interpreting the results. Graphs and charts are used to display the success of the TFDF model, particularly in the context of hyperparameter tuning. This visual representation was crucial in my learning journey, allowing me to effectively analyze and comprehend the model's performance.</p>
+            
+            <h2>Step 9: Conclusion and Future Steps</h2>
+            <p>The notebook concludes with a summary of findings and potential future steps. This includes reflections on the model's performance and considerations for further enhancements. The project not only improved my understanding of TFDF but also provided insights into the entire machine learning cycle, from data preprocessing to model evaluation and visualization.</p>
+          
+            
+            <br>
+            <h2 style="color: #7af5b9"><strong>[End of Page]</strong></h2>
+            
+        </body>
+       
+        
+    </main>
+   
+</body>
+</html>

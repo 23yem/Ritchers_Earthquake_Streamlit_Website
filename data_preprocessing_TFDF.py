@@ -9,6 +9,7 @@ import tensorflow_decision_forests as tfdf
 
 
 
+
 # Set Global random seed to make sure we can replicate any model that we create (no randomness)
 np.random.seed(42)
 random.seed(42)

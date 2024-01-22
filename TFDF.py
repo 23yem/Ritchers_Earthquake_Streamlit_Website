@@ -44,7 +44,7 @@ st.markdown("""
 
 st.markdown("""
     <div style="text-align: center">
-        <h1 style="color: #7af5b9;">Using my Best Deployed and Saved Light Gradient Boosting Model (LGBM)</h1>
+        <h1 style="color: #7af5b9;">Using my Best Deployed and Saved  Tensor Flow Decision Forests (TFDF)!</h1>
         <h3 style="color: #7af5b9;">Please select the values that you want, and then press the "predict" button to see if they would survive the titanic</h3>
         <h3 style="color: #7af5b9;">Just a heads up that some of these values are categorial like "q" or "t" and it isn't clear what they mean. So don't worry if you don't understand what certain values mean. Just randomly pick.</h3>
     </div>
@@ -173,7 +173,7 @@ with col2:
                                             has_superstructure_other, count_families, has_secondary_use)
 
 
-        model = joblib.load_model("model1_RF")
+        model = load_model("model1_RF")
 
         # # Print dataframe of the data
         #st.dataframe(preprocessed_data)
@@ -183,7 +183,7 @@ with col2:
         predictions = model.predict(preprocessed_data)
 
         # Extract the probabilities and convert to a NumPy array (like .predict() normally does for tensorflow neural network with multi-class classification)
-        probabilities = np.array([prediction['probabilities'] for prediction in predictions])
+        predictions = np.array([prediction['probabilities'] for prediction in predictions])
     
 
         # Print table that tells the percentage for each class
