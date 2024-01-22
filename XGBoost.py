@@ -185,7 +185,7 @@ with col2:
     
 
         # Print table that tells the percentage for each class
-        st.markdown("This table shows the percentage certainty for each column. The '0' column <span style='color: green; font-weight: bold;'> is low damage </span>, the '1' column is <span style='color: gray; font-weight: bold;'>medium damage</span>, and the '2' column is <span style='color: red; font-weight: bold;'>high damage</span>.", unsafe_allow_html=True)        
+        st.markdown("<h4>This table shows the percentage certainty for each column. The '0' column <span style='color: green; font-weight: bold;'> is low damage </span>, the '1' column is <span style='color: gray; font-weight: bold;'>medium damage</span>, and the '2' column is <span style='color: red; font-weight: bold;'>high damage</span></h4>.", unsafe_allow_html=True)        
         predictions_percent = np.around(predictions*100, 2)
 
         predictions_percent = pd.DataFrame(predictions_percent) # Convert to dataframe
@@ -228,11 +228,11 @@ with col2:
 
 
         if prediction == 0:
-            st.markdown(f'#### Prediction: Your building experienced <span style="color: green; font-weight: bold;">very low damage!</span> Very lucky! ', unsafe_allow_html=True)
+            st.markdown(f'## Prediction: Your building experienced <span style="color: green; font-weight: bold;">very low damage!</span> Very lucky! ', unsafe_allow_html=True)
         elif prediction == 1:
-            st.markdown(f'#### Prediction: Your building experienced <span style="color: gray; font-weight: bold;">a medium amout of damage.</span> I hope you are okay! ', unsafe_allow_html=True)
+            st.markdown(f'## Prediction: Your building experienced <span style="color: gray; font-weight: bold;">a medium amout of damage.</span> I hope you are okay! ', unsafe_allow_html=True)
         else:
-            st.markdown(f'#### Prediction: Your building experienced <span style="color: red; font-weight: bold;">very HIGH damage!</span> Your building is most likely destroyed!', unsafe_allow_html=True)
+            st.markdown(f'## Prediction: Your building experienced <span style="color: red; font-weight: bold;">very HIGH damage!</span> Your building is most likely destroyed!', unsafe_allow_html=True)
 
 
 
