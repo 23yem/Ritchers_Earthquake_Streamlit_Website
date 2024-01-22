@@ -4,6 +4,7 @@ from streamlit.components import v1 as components
 from tensorflow.keras.models import load_model
 import pandas as pd
 import numpy as np
+import joblib 
 
 
 from data_preprocessing_XGBoost import data_preprocessing
@@ -172,12 +173,14 @@ with col2:
                                             has_superstructure_other, count_families, has_secondary_use)
 
 
-        model = load_model("model3_TF.h5")
+        model = joblib.load("saved_XGBoost_model14.joblib")
 
         # # Print dataframe of the data
         #st.dataframe(preprocessed_data)
 
-        predictions = model.predict(preprocessed_data)
+
+        # I've never used .predict_proba but it will give us a 2D numpy array giving the probabilities for each class, like .predict() for Tensorflow does for multi-class classification. 
+        predictions = model.predict_proba(preprocessed_data) #For my XGBoost notebook, I just use .predict() but I'll use .predict_proba() here to give user more info
 
     
 
@@ -185,7 +188,7 @@ with col2:
         st.markdown("This table shows the percentage certainty for each column. The '0' column <span style='color: green; font-weight: bold;'> is low damage </span>, the '1' column is <span style='color: gray; font-weight: bold;'>medium damage</span>, and the '2' column is <span style='color: red; font-weight: bold;'>high damage</span>.", unsafe_allow_html=True)        
         predictions_percent = np.around(predictions*100, 2)
 
-        predictions_percent = pd.DataFrame(predictions_percent)
+        predictions_percent = pd.DataFrame(predictions_percent) # Convert to dataframe
 
         predictions_percent = predictions_percent.astype(str)
 
