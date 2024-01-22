@@ -44,7 +44,7 @@ st.markdown("""
 
 st.markdown("""
     <div style="text-align: center">
-        <h1 style="color: #7af5b9;">Using my Best Deployed and Saved Neural Network</h1>
+        <h1 style="color: #7af5b9;">Using my Best Deployed and Saved XGBoost Model/h1>
         <h3 style="color: #7af5b9;">Please select the values that you want, and then press the "predict" button to see if they would survive the titanic</h3>
         <h3 style="color: #7af5b9;">Just a heads up that some of these values are categorial like "q" or "t" and it isn't clear what they mean. So don't worry if you don't understand what certain values mean. Just randomly pick.</h3>
     </div>
