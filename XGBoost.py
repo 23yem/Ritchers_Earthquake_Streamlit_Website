@@ -239,4 +239,4 @@ with col2:
 with open('XGBoost_2.html', 'r') as file:    
     html_content_2 = file.read()
 
-components.html(html_content_2, width = None, height=5500)
+components.html(html_content_2, width = None, height=6000)
