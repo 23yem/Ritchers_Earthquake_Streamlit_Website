@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <style>
+        body {
+            font-size: 0.7rem; /* Base font size */
+            background-color: #8B4513;
+            zoom: 1.5; /* Scale up by 50% */
+        }
+
+        p, h2, figcaption, h3 {
+        color: #ffffff;
+        }
+
+        .container {
+            max-width: 900px; /* Max-width for the container */
+            min-height: 5500px;
+            margin: auto; /* Center the container */
+            
+        }
+        figure img {
+            width: 100%; /* Full width of its container */
+            max-width: 450px; /* Max width of the image */
+            height: auto; /* Maintain aspect ratio */
+            display: block; /* Block display to respect max-width */
+            margin: 0 auto; /* Center the image */
+        }
+        h2 {
+            font-size: 1.2rem; /* Heading size */
+        }
+        h3 {
+            font-size: 1rem; /* Subheading size */
+        }
+        p {
+            font-size: 0.7rem; /* Paragraph text size */
+        }
+        /* Ensure the main content is visible */
+        main {
+            padding: 1rem 0; /* Add padding around main content */
+        }
+        nav ul {
+            padding: 0.5rem 0; /* Padding for nav */
+            list-style-type: none; /* Remove list bullets */
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+            display: flex; /* Add this line */
+            flex-wrap: nowrap; /* Add this line to prevent wrapping */
+        }
+        nav ul li {
+            display: inline; /* Display nav items in a line */
+            margin-right: 10px; /* Right margin for spacing */
+        }
+        nav ul li a {
+        
+            text-decoration: none; /* Remove text underline */
+            font-size: 0.6rem; /* Smaller font size for nav links */
+            padding: 5px 10px; /* Add padding to give a button-like appearance */
+            border-radius: 50px; /* Rounded corners */
+            transition: background-color 0.3s, color 0.3s; /* Transition for smooth color change */
+            background-color: #81B29A; /* Set background color */
+            color: #fff; /* Set text color */
+        }
+
+        /* Change color on hover */
+        nav ul li a:hover {
+            background-color: #b8dac9; /* Change background color on hover */
+            color: #fff; /* Keep text color the same on hover */
+            text-decoration: underline; /* Add underline on hover */
+        }
+
+
+        /* Responsive styles for mobile!*/
+        @media (max-width: 1000px) {
+
+            h1 {
+            font-size: 1.5rem;
+           
+            }
+
+            .container {
+            
+            margin: auto; /* Center the container */
+            overflow-y: auto; /* Add a scrollbar if necessary */
+          
+            }
+        }
+        /* THIS IS VERY IMPORTANT. My Google Chrome is in Dark Mode so it makes the background color black. This overrides that and fills any blank spaces with my desired color, instead of black*/
+        @media (prefers-color-scheme: dark) { 
+            :root {
+                --background-color: #8B4513 !important; /* Or any other light color you prefer */
+                /* Define other variables or CSS rules as needed */
+            }
+        }
+
+        @media (prefers-color-scheme: light) { 
+            :root {
+                --background-color: #8B4513 !important; /* Or any other light color you prefer */
+                /* Define other variables or CSS rules as needed */
+            }
+        }
+    </style>
+    <title>Nepal Project</title>
+</head>
+<body>
+    
+    <main class="container">
+        
+        <body>
+            <h1 style="color: #7af5b9; text-align: center;">My First Time Developing a Light Gradient Boosing Model (LGBM)!</h1>
+
+            
+            <h2>Step 1: Introduction and Setup</h2>
+            <p>In the initial phase of the notebook, the focus is on setting up the necessary environment for the XGBoost modeling task. This includes importing essential libraries like NumPy for linear algebra and Pandas for data processing. The setup serves as the foundation for the subsequent data analysis and modeling stages. It's noteworthy how this step lays the groundwork for more advanced machine learning processes, reflecting a keen understanding of the importance of a solid start in any data science project.</p>
+            
+            <h2>Step 2: Data Loading and Preprocessing</h2>
+            <p>The next critical step involves loading and preprocessing the data. This is crucial for ensuring that the model receives clean, well-structured input. Techniques like handling missing values, encoding categorical variables, and normalizing features are likely employed here. This step demonstrates an appreciation for the significance of data quality in machine learning, highlighting the meticulous attention to detail required for successful model training.</p>
+            
+            <h2>Step 3: Exploratory Data Analysis (EDA)</h2>
+            <p>Exploratory Data Analysis is performed to gain insights into the dataset. Through visualizations and statistical analysis, the notebook likely explores relationships between variables, distribution of data, and potential anomalies. This step is essential for understanding the dataset's characteristics and informing subsequent modeling decisions. It's a testament to the analytical skills necessary in machine learning, showcasing the ability to derive meaningful insights from raw data.</p>
+            
+            <h2>Step 4: Feature Engineering</h2>
+            <p>Feature engineering is a pivotal step where domain knowledge is applied to create new features or modify existing ones to improve model performance. This process might include creating interaction terms, polynomial features, or selecting the most relevant features. It emphasizes the creative aspect of machine learning, where intuition and expertise play a crucial role in enhancing model accuracy.</p>
+            
+            <h2>Step 5: Model Selection and Baseline Model</h2>
+            <p>The notebook then progresses to selecting an appropriate machine learning model, in this case, XGBoost, and establishing a baseline model. This initial model serves as a point of comparison for future iterations and optimizations. The choice of XGBoost reflects an understanding of its effectiveness for structured data problems. This step is a blend of strategic decision-making and technical knowledge, vital for any machine learning endeavor.</p>
+            
+            <h2>Step 6: Hyperparameter Tuning with Optuna</h2>
+            <p>One of the most significant learning experiences highlighted in the notebook is the use of Optuna for hyperparameter tuning. This step involves experimenting with different combinations of hyperparameters to optimize the XGBoost model's performance. The integration of Optuna not only enhances model accuracy but also introduces an efficient and systematic approach to model tuning. This experience underscores the importance of continuous learning and adapting to new methodologies in the field of data science.</p>
+            
+            <h2>Step 7: XGBoost GPU Acceleration</h2>
+            <p>To further optimize the process, the notebook employs XGBoost GPU Acceleration. This approach significantly speeds up the training time, allowing for more complex models to be trained without hardware overheating issues. This step is a clear indication of the innovative use of technology to overcome computational challenges, showcasing a forward-thinking approach in machine learning practices.</p>
+            
+            <h2>Step 8: Model Evaluation and Refinement</h2>
+            <p>Following the tuning, the model is evaluated using appropriate metrics to assess its performance. Based on the evaluation, further refinements are made, possibly involving adjustments to the model structure or hyperparameters. This iterative process of evaluation and refinement is crucial for achieving the best possible model performance. It demonstrates a commitment to precision and excellence in model development.</p>
+            
+            <h2>Step 9: Model Interpretation</h2>
+            <p>In this step, the notebook likely delves into interpreting the model's results, understanding the importance of each feature, and drawing conclusions. This is vital for translating technical results into actionable insights. The ability to interpret and communicate the model's findings is as important as building the model itself, emphasizing the need for a holistic skill set in data science.</p>
+            
+            <h2>Step 10: Conclusion and Future Work</h2>
+            <p>The notebook concludes with a summary of the findings, reflections on the learning journey, particularly the first-time experience with XGBoost, and thoughts on potential improvements or future work. This final step not only encapsulates the project's outcomes but also sets the stage for continued learning and development in the ever-evolving field of machine learning.</p>
+
+            <br>
+            <h2 style="color: #7af5b9"><strong>[End of Page]</strong></h2>
+            
+        </body>
+       
+        
+    </main>
+   
+</body>
+</html>
