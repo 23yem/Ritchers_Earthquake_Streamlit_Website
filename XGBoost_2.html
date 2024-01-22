@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <style>
+        body {
+            font-size: 0.7rem; /* Base font size */
+            background-color: #8B4513;
+            zoom: 1.5; /* Scale up by 50% */
+        }
+
+        p, h2, figcaption, h3 {
+        color: #ffffff;
+        }
+
+        .container {
+            max-width: 900px; /* Max-width for the container */
+            min-height: 5500px;
+            margin: auto; /* Center the container */
+            
+        }
+        figure img {
+            width: 100%; /* Full width of its container */
+            max-width: 450px; /* Max width of the image */
+            height: auto; /* Maintain aspect ratio */
+            display: block; /* Block display to respect max-width */
+            margin: 0 auto; /* Center the image */
+        }
+        h2 {
+            font-size: 1.2rem; /* Heading size */
+        }
+        h3 {
+            font-size: 1rem; /* Subheading size */
+        }
+        p {
+            font-size: 0.7rem; /* Paragraph text size */
+        }
+        /* Ensure the main content is visible */
+        main {
+            padding: 1rem 0; /* Add padding around main content */
+        }
+        nav ul {
+            padding: 0.5rem 0; /* Padding for nav */
+            list-style-type: none; /* Remove list bullets */
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+            display: flex; /* Add this line */
+            flex-wrap: nowrap; /* Add this line to prevent wrapping */
+        }
+        nav ul li {
+            display: inline; /* Display nav items in a line */
+            margin-right: 10px; /* Right margin for spacing */
+        }
+        nav ul li a {
+        
+            text-decoration: none; /* Remove text underline */
+            font-size: 0.6rem; /* Smaller font size for nav links */
+            padding: 5px 10px; /* Add padding to give a button-like appearance */
+            border-radius: 50px; /* Rounded corners */
+            transition: background-color 0.3s, color 0.3s; /* Transition for smooth color change */
+            background-color: #81B29A; /* Set background color */
+            color: #fff; /* Set text color */
+        }
+
+        /* Change color on hover */
+        nav ul li a:hover {
+            background-color: #b8dac9; /* Change background color on hover */
+            color: #fff; /* Keep text color the same on hover */
+            text-decoration: underline; /* Add underline on hover */
+        }
+
+
+        /* Responsive styles for mobile!*/
+        @media (max-width: 1000px) {
+
+            h1 {
+            font-size: 1.5rem;
+           
+            }
+
+            .container {
+            
+            margin: auto; /* Center the container */
+            overflow-y: auto; /* Add a scrollbar if necessary */
+          
+            }
+        }
+        /* THIS IS VERY IMPORTANT. My Google Chrome is in Dark Mode so it makes the background color black. This overrides that and fills any blank spaces with my desired color, instead of black*/
+        @media (prefers-color-scheme: dark) { 
+            :root {
+                --background-color: #8B4513 !important; /* Or any other light color you prefer */
+                /* Define other variables or CSS rules as needed */
+            }
+        }
+
+        @media (prefers-color-scheme: light) { 
+            :root {
+                --background-color: #8B4513 !important; /* Or any other light color you prefer */
+                /* Define other variables or CSS rules as needed */
+            }
+        }
+    </style>
+    <title>Nepal Project</title>
+</head>
+<body>
+    
+    <main class="container">
+        
+        <body>
+            <h1 style="color: #7af5b9; text-align: center;">Comprehensive Analysis of the GPU Accelerated Neural Network</h1>
+
+            
+    <h2>Step 1: Introduction and Setup</h2>
+    <p>The script initiates with an introduction to the Richter's Predictor Nepal Earthquake Damage Predictor Neural Network Model. Essential libraries such as numpy for linear algebra and pandas for data processing are imported, setting the stage for comprehensive data analysis and manipulation. This foundational step is critical for preparing the analytical environment for complex machine learning tasks.</p>
+
+    <h2>Step 2: Environment Configuration and GPU Acceleration</h2>
+    <p>Ensuring optimal use of computational resources, the script configures TensorFlow to utilize the first GPU, enhancing the model's training efficiency. The integration of GPU acceleration demonstrates a significant leap in computational capability, crucial for handling large datasets and complex neural network architectures. This step marks the transition from theoretical modeling to practical, high-performance computation in machine learning.</p>
+
+    <h2>Step 3: Setting Global Random Seed</h2>
+    <p>To achieve reproducibility and consistency in results, the script sets a global random seed for numpy, random, and TensorFlow. This action ensures that every execution of the model yields consistent outcomes, a fundamental requirement in scientific computing and machine learning. Reproducibility is key to validating the model's performance and ensuring its reliability.</p>
+
+    <h2>Step 4: Data Loading</h2>
+    <p>The script progresses by loading the training and testing data, which include features (X) and target labels (Y). This step is crucial for establishing the dataset upon which the model will train and validate its predictions. Proper data loading and handling are the first steps in the journey of transforming raw data into actionable insights.</p>
+
+    <h2>Step 5: Feature Selection Techniques</h2>
+    <p>In a critical move towards efficient model building, the script explores various feature selection techniques such as correlation matrices with heatmaps and univariate selection. These techniques are instrumental in identifying the most relevant features for the model, thereby enhancing its predictive accuracy and reducing computational load. Intelligent feature selection is a cornerstone of effective machine learning, particularly in datasets with a multitude of variables.</p>
+            
+    <h2>Step 6: Feature Selection Techniques</h2>
+    <p>The script delves into identifying the most relevant features for predicting earthquake damage. Various techniques like Correlation Matrix with Heatmap, Univariate Selection, Recursive Feature Elimination (RFE), and Feature Importance are discussed. These methods are crucial for understanding which features have the strongest relationship with the target variable, ensuring the model focuses on the most informative aspects of the data.</p>
+
+    <h2>Step 7: Recursive Feature Elimination (RFE) Implementation</h2>
+    <p>As a part of feature selection, the script implements RFE, a technique that systematically removes the weakest features to optimize the model's performance. This process is instrumental in refining the model, allowing it to concentrate on the most impactful data features, enhancing both accuracy and efficiency.</p>
+
+    <h2>Step 8: Handling Categorical Features</h2>
+    <p>The script addresses the challenge of converting categorical features into numerical values, a critical step in preparing the data for the neural network. Techniques like One-Hot Encoding and Label Encoding are utilized, ensuring that all features are in a format conducive to effective model training and prediction.</p>
+            
+    <h2>Step 9: Applying Recursive Feature Elimination with LightGBM</h2>
+    <p>The script utilizes Recursive Feature Elimination (RFE) in conjunction with LightGBM, a gradient boosting model well-suited for large datasets. This combination is aimed at selecting the most effective features for the model. The use of LightGBM highlights the script's focus on leveraging powerful and efficient algorithms to handle the extensive dataset effectively.</p>
+
+    <h2>Step 10: Feature Selection and Model Training Preparation</h2>
+    <p>Following the feature selection through RFE, the script prepares for model training by identifying and retaining the selected features. This step involves mapping feature names to their respective importance as determined by RFE, thereby focusing the model's learning on the most relevant data. It's a crucial step towards building a model that is both accurate and computationally efficient.</p>
+            
+        </body>
+       
+        
+    </main>
+    <footer class="container">
+        <small><a href="index.html">Home</a> </small>
+    </footer>
+</body>
+</html>
