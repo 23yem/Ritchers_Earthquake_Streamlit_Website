@@ -7,7 +7,7 @@ import numpy as np
 import joblib 
 
 
-from data_preprocessing_LGBM import data_preprocessing
+from data_preprocessing_TFDF import data_preprocessing
 
 st.set_page_config(layout="wide")
 
@@ -47,6 +47,7 @@ st.markdown("""
         <h1 style="color: #7af5b9;">Using my Best Deployed and Saved  Tensor Flow Decision Forests (TFDF)!</h1>
         <h3 style="color: #7af5b9;">Please select the values that you want, and then press the "predict" button to see if they would survive the titanic</h3>
         <h3 style="color: #7af5b9;">Just a heads up that some of these values are categorial like "q" or "t" and it isn't clear what they mean. So don't worry if you don't understand what certain values mean. Just randomly pick.</h3>
+        <h3 style="color: #7af5b9;">Also, this model can take a few seconds to load so if the prediction doesn't automatically appear a few secods after pressing the "Predict" button, please wait a little longer. </h3>
     </div>
     """, unsafe_allow_html=True)
 
@@ -183,14 +184,14 @@ with col2:
         predictions = model.predict(preprocessed_data)
 
         # Extract the probabilities and convert to a NumPy array (like .predict() normally does for tensorflow neural network with multi-class classification)
-        predictions = np.array([prediction['probabilities'] for prediction in predictions])
+        
     
 
         # Print table that tells the percentage for each class
-        st.markdown("<h4>This table shows the percentage certainty for each column. The '0' column <span style='color: green; font-weight: bold;'> is low damage </span>, the '1' column is <span style='color: gray; font-weight: bold;'>medium damage</span>, and the '2' column is <span style='color: red; font-weight: bold;'>high damage</span></h4>.", unsafe_allow_html=True)        
+        st.markdown("<h4>This table shows the percentage certainty for each column. The '0' column <span style='color: green; font-weight: bold;'> is low damage </span>, the '1' column is <span style='color: gray; font-weight: bold;'>medium damage</span>, and the '2' column is <span style='color: red; font-weight: bold;'>high damage</span></h4>", unsafe_allow_html=True)        
         predictions_percent = np.around(predictions*100, 2)
 
-        predictions_percent = pd.DataFrame(predictions_percent, columns = model.classes_) # Convert to dataframe. model.classes_ is an array of the unique classes for the multi-class classification
+        predictions_percent = pd.DataFrame(predictions_percent) # Convert to dataframe. model.classes_ is an array of the unique classes for the multi-class classification
 
         predictions_percent = predictions_percent.astype(str)
 
