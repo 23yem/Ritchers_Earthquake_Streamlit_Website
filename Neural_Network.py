@@ -225,7 +225,7 @@ with col2:
 
 
         if prediction == 0:
-            st.markdown(f'## Predictions: Your building experienced <span style="color: green; font-weight: bold;">very low damage!</span> Very lucky! ', unsafe_allow_html=True)
+            st.markdown(f'## Prediction: Your building experienced <span style="color: green; font-weight: bold;">very low damage!</span> Very lucky! ', unsafe_allow_html=True)
         elif prediction == 1:
             st.markdown(f'## Prediction: Your building experienced <span style="color: gray; font-weight: bold;">a medium amout of damage.</span> I hope you are okay! ', unsafe_allow_html=True)
         else:
