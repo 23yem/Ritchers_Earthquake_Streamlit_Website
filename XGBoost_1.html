@@ -6,9 +6,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
     <style>
         body {
-            font-size: 0.7rem; /* Base font size */
+            font-size: 1.1rem; /* Increased by 50% */
             background-color: #8B4513;
-            zoom: 1.5; /* Scale up by 50% */
+            zoom: 1; /* Scale up by 50% */
         }
 
         p, h2, figcaption, h3 {
@@ -16,31 +16,31 @@
         }
 
         .container {
-            max-width: 1000px; /* Max-width for the container */
+            max-width: 1500px; 
             margin: auto; /* Center the container */
         }
         figure img {
             width: 100%; /* Full width of its container */
-            max-width: 550px; /* Max width of the image */
+            max-width: 825px; /* Max width of the image */
             height: auto; /* Maintain aspect ratio */
             display: block; /* Block display to respect max-width */
             margin: 0 auto; /* Center the image */
         }
         h2 {
-            font-size: 1.2rem; /* Heading size */
+            font-size: 2.1rem; /* Heading size */
         }
         h3 {
-            font-size: 1rem; /* Subheading size */
+            font-size: 1.8rem; /* Subheading size */
         }
         p {
-            font-size: 0.7rem; /* Paragraph text size */
+            font-size: 1.2rem; /* Paragraph text size */
         }
         /* Ensure the main content is visible */
         main {
-            padding: 1rem 0; /* Add padding around main content */
+            padding: 1.5rem 0; /* Add padding around main content */
         }
         nav ul {
-            padding: 0.5rem 0; /* Padding for nav */
+            padding: 0.75rem 0; /* Padding for nav */
             list-style-type: none; /* Remove list bullets */
             margin: 0; /* Remove default margin */
             padding: 0; /* Remove default padding */
@@ -49,14 +49,14 @@
         }
         nav ul li {
             display: inline; /* Display nav items in a line */
-            margin-right: 10px; /* Right margin for spacing */
+            margin-right: 15px; /* Right margin for spacing */
         }
         nav ul li a {
            
             text-decoration: none; /* Remove text underline */
-            font-size: 0.6rem; /* Smaller font size for nav links */
-            padding: 5px 10px; /* Add padding to give a button-like appearance */
-            border-radius: 50px; /* Rounded corners */
+            font-size: 0.9rem; /* Smaller font size for nav links */
+            padding: 7.5px 15px; /* Add padding to give a button-like appearance */
+            border-radius: 75px; /* Rounded corners */
             transition: background-color 0.3s, color 0.3s; /* Transition for smooth color change */
             background-color: #81B29A; /* Set background color */
             color: #fff; /* Set text color */
@@ -86,13 +86,17 @@
         justify-content: space-around; /* Distribute space evenly between items */
     }
 
-    nav ul li a , nav ul li a{
-        font-size: calc(0.3rem + 0.2vw); /* Dynamically adjust font size based on viewport width */
+    nav ul li {
+        font-size: calc(0.8rem + 0.7vw); /* Dynamically adjust font size based on viewport width */
     }
-    
+
+    nav ul li a {
+        font-size: calc(0.3rem + 0.4vw); /* Dynamically adjust font size based on viewport width */
+    }
+
 
         /* Responsive styles for mobile!*/
-        @media (max-width: 1350px) {
+        @media (max-width: 1050px) {
         body {
             background-color: #8B4513 !important;
             zoom: 1; /* Reset zoom for small screens */
