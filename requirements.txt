@@ -4,3 +4,4 @@ pandas
 joblib
 scikit-learn
 tensorflow_decision_forests
+xgboost
